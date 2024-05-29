@@ -51,3 +51,25 @@ console.log(result2);
 console.log(longest);
 console.log(longerThanNumber);
 console.log(printNums(n));
+
+// Part 2: Thinking Methodically
+dataTester = [
+  { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+  { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+  { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+  { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+  { id: "7", name: "Bilbo", occupation: "None", age: "111" },
+];
+
+// Sort array by age
+function sortByAge(a, b) {
+  return a.age - b.age;
+}
+// Filter the array to remove entries with an age greater than 50
+const entries50OrLess = dataTester.filter((name) => {
+  const is50OrLess = name.age <= 50;
+  return is50OrLess;
+});
+
+console.log(dataTester.sort(sortByAge));
+console.log(entries50OrLess);
