@@ -28,6 +28,11 @@ function longestString(array) {
 
   return longestString;
 }
+// Take an array of strings, and a number and return an array of the strings that are longer than the given number
+const words = ["say", "hello", "in", "the", "morning"];
+const longerThanNumber = words.filter((word) => word.length > 3);
+// Take a number, n, and print every number between 1 and n without using loops. Use recursion
+
 const numbers = [1, 2, 3, 4, 5];
 const strings = [`sour`, `skittles`, `are`, `the`, `best`];
 const result = sumArray(numbers);
@@ -36,3 +41,4 @@ const longest = longestString(strings);
 console.log(result);
 console.log(result2);
 console.log(longest);
+console.log(longerThanNumber);
