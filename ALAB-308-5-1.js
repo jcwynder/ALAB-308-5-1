@@ -106,8 +106,8 @@ person.age++;
 
 // Take an object, make a copy, and increment the age field of the copy. Return the copy
 const userDetails = {
-  name: "Jermal",
-  age: 31,
+  name: "Wynder",
+  age: 13,
 };
 let cloneUser = { ...userDetails };
 cloneUser.age++;
