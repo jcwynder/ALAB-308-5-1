@@ -70,7 +70,7 @@ const entries50OrLess = dataTester.filter((name) => {
   const is50OrLess = name.age <= 50;
   return is50OrLess;
 });
-// Map the array to change the “occupation” key to “job” and increment every age by 1.
+// Map the array to change the “occupation” key to “job”
 function rename() {
   dataTester = dataTester.map(function (obj) {
     // Assign new key
@@ -83,6 +83,15 @@ function rename() {
   });
 }
 rename();
+// Increment every age by 1
+function incrementAge() {
+  dataTester = dataTester.map(function (obj) {
+    obj.age++;
+
+    return obj;
+  });
+}
+incrementAge();
 
 // Use the reduce method to calculate the sum of the ages
 const agesOfPeople = [41, 25, 19, 58, 111];
