@@ -53,7 +53,7 @@ console.log(longerThanNumber);
 console.log(printNums(n));
 
 // Part 2: Thinking Methodically
-dataTester = [
+let dataTester = [
   { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
   { id: "48", name: "Barry", occupation: "Runner", age: "25" },
   { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
@@ -70,6 +70,16 @@ const entries50OrLess = dataTester.filter((name) => {
   const is50OrLess = name.age <= 50;
   return is50OrLess;
 });
+// Use the reduce method to calculate the sum of the ages
+const agesOfPeople = [41, 25, 19, 58, 111];
+
+const sumOfAges = agesOfPeople.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+// Then use the result to calculate the average age
+const avgAge = sumOfAges / agesOfPeople.length;
 
 console.log(dataTester.sort(sortByAge));
 console.log(entries50OrLess);
+console.log(`The sum of the ages for the group is ${sumOfAges}.`);
+console.log(`The average age of the group is ${avgAge}.`);
