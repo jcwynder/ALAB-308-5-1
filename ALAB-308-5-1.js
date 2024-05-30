@@ -102,15 +102,21 @@ console.log(`The average age of the group is ${avgAge}.`);
 
 // Take an object and increment its age field
 const person = { name: `Jermal`, age: `31` };
-person.age++;
+function incrementer() {
+  return person;
+}
+let incrementedAge = incrementer(person.age++);
 
 // Take an object, make a copy, and increment the age field of the copy. Return the copy
 const userDetails = {
   name: "Wynder",
   age: 13,
 };
-let cloneUser = { ...userDetails };
-cloneUser.age++;
+const cloneUser = { ...userDetails };
+function incrementerTwo() {
+  return cloneUser;
+}
+let incrementedAgeTwo = incrementerTwo(cloneUser.age++);
 
-console.log(person);
-console.log(cloneUser);
+console.log(incrementedAge);
+console.log(incrementedAgeTwo);
